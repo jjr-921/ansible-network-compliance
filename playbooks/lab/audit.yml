@@ -1,0 +1,9 @@
+- name: Run PAN-OS CIS-style compliance audit
+  hosts: all
+  gather_facts: no
+
+  collections:
+    - paloaltonetworks.panos
+
+  roles:
+    - cis_audit
