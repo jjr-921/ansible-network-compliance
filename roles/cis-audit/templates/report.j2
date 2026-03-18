@@ -1,0 +1,6 @@
+PAN-OS Compliance Report
+=======================
+
+HTTP Disabled: {{ 'PASS' if compliance_results.http_disabled else 'FAIL' }}
+Password Policy: {{ 'PASS' if compliance_results.password_length_ok else 'FAIL' }}
+Logging Enabled: {{ 'PASS' if compliance_results.logging_enabled else 'FAIL' }}
