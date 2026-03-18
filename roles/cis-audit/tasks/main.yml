@@ -13,3 +13,8 @@
       http_disabled: "{{ http_disabled | default(false) }}"
       password_length_ok: "{{ password_length_ok | default(false) }}"
       logging_enabled: "{{ logging_enabled | default(false) }}"
+
+- name: Generate compliance report
+  template:
+    src: report.j2
+    dest: "outputs/reports/{{ inventory_hostname }}.txt"
