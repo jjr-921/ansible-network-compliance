@@ -1,0 +1,8 @@
+- name: Check logging configuration
+  paloaltonetworks.panos.panos_op:
+    cmd: "show logging-status"
+  register: logging_status
+
+- name: Evaluate logging enabled
+  set_fact:
+    logging_enabled: "{{ 'enabled' in logging_status.stdout }}"

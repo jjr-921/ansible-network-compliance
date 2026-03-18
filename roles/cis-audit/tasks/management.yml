@@ -1,0 +1,4 @@
+- name: Gather system info
+  paloaltonetworks.panos.panos_op:
+    cmd: "show system info"
+  register: system_info

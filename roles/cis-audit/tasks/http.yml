@@ -1,0 +1,8 @@
+- name: Check if HTTP management is disabled
+  paloaltonetworks.panos.panos_op:
+    cmd: "show deviceconfig system"
+  register: system_config
+
+- name: Evaluate HTTP setting
+  set_fact:
+    http_disabled: "{{ 'http' not in system_config.stdout }}"

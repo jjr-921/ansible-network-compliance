@@ -1,0 +1,15 @@
+- name: Run management checks
+  import_tasks: management.yml
+
+- name: Run password checks
+  import_tasks: password.yml
+
+- name: Run logging checks
+  import_tasks: logging.yml
+
+- name: Build compliance report
+  set_fact:
+    compliance_results:
+      http_disabled: "{{ http_disabled | default(false) }}"
+      password_length_ok: "{{ password_length_ok | default(false) }}"
+      logging_enabled: "{{ logging_enabled | default(false) }}"
