@@ -1,0 +1,7 @@
+- name: retrieve api_key
+  paloaltonetworks.panos.panos_api_key:
+    provider: '{{ provider }}'
+  register: auth
+
+- debug:
+    msg: '{{ auth.api_key }}'
