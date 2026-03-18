@@ -6,4 +6,4 @@
     - paloaltonetworks.panos
 
   roles:
-    - cis_audit
+    - cis-audit
