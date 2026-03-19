@@ -1,4 +1,0 @@
-provider:
-  host: "{{ ansible_host }}"
-  username: "{{ username }}"
-  password: "{{ password }}"
