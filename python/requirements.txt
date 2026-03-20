@@ -1,2 +1,5 @@
-ansible==13.4.0
-ansible-lint==26.3.0
+pan-python
+pan-os-python
+ansible
+ansible-lint
+ansible-dev-tools
